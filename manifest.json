@@ -1,0 +1,16 @@
+{
+  "name": "Sysneted | Servicios TI, ciberseguridad y formación",
+  "short_name": "Sysneted",
+  "description": "Servicios de TI, ciberseguridad y academia práctica para analistas SOC.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F4F8FC",
+  "theme_color": "#0E2A55",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

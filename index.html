@@ -9,7 +9,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <link rel="icon" type="image/png" href="./Logo_Final.png">
 
-<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://api.web3forms.com; form-action https://api.web3forms.com; base-uri 'self'; object-src 'none'; manifest-src 'self'; worker-src 'self'">
+<meta name="theme-color" content="#0E2A55">
+<link rel="manifest" href="./manifest.json">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<script src="./vendor/qrcode.js"></script>
 
 <style>
 :root {
@@ -8106,6 +8110,15 @@ function aplicarModoApp() {
 }
 
 window.addEventListener("resize", alinearEnlacesAzul);
+</script>
+
+<script>
+// PWA: registra el service worker (solo en https o localhost)
+if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
+    window.addEventListener("load", function () {
+        navigator.serviceWorker.register("./sw.js").catch(function () {});
+    });
+}
 </script>
 
 </body>
